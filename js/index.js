@@ -2,6 +2,7 @@ const agreeModal = document.querySelector('.accept-modal');
 const heroFruit = document.getElementById('hero-fruit');
 const heroBox = document.getElementById('hero-box');
 const acceptButton = document.getElementById('agree');
+const notAgreeButton = document.getElementById('not-agree');
 const tl = gsap.timeline();
 const typeSplit = new SplitType('[animate]', {
     types: 'lines, words, chars',
@@ -23,3 +24,9 @@ acceptButton.addEventListener('click', function () {
         .from(".hero__img-2", { opacity: 0 })
 })
 
+notAgreeButton.addEventListener('click', function () {
+    agreeModal.classList.remove('accept-modal_show')
+
+    tl.to(".accept-modal", { opacity: 0 })
+        .from(".hero", { opacity: 0 })
+})
