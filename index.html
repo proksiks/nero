@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NERO | Жидкости для электронных сигарет</title>
+    <meta name="description" content="Жидкости для электронных сигарет">
+    <meta name="keywords" content="жидкости, жидкости для электронных сигарет, оптом, электронные сигареты">
+
+    <link rel="shortcut icon" href="images/meta/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/meta/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/meta/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/meta/favicon-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__container container">
+            <img class="header__logo" src="images/logo.svg" alt="Логотип компании HERO">
+            <nav class="header__nav">
+                <ul class="header__list list-reset">
+                    <li class="header__block"><a class="header__link" href="#">Главная</a></li>
+                    <li class="header__block"><a class="header__link" href="#">ОБЗОРЫ</a></li>
+                    <li class="header__block"><a class="header__link" href="#">Контакты</a></li>
+                    <li class="header__block"><a class="header__link" href="#">ДИСТРИБЬЮТОРАМ</a></li>
+                </ul>
+            </nav>
+            <ul class="header__socials list-reset">
+                <li class="header__social">
+                    <a class="header__icon header__icon_tg" href="#" aria-label="Социальная сеть Телеграмм"></a>
+                </li>
+                <li class="header__social">
+                    <a class="header__icon header__icon_vk" href="#" aria-label="Социальная сеть Вконтакте"></a>
+                </li>
+                <li class="header__social">
+                    <a class="header__icon header__icon_inst" href="#" aria-label="Социальная сеть Инстаграмм"></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <p class="hero__title title" animate>
+                    <span class="line">НОВАЯ ФОРМУЛА</span>
+                    <span class="line"><span class="gradient-text">ЖИДКОСТИ</span></span>
+                    <span class="line">ОТ НЕЙРОСЕТИ</span>
+                </p>
+                <p class="hero__descr descr" animate>
+                    <span class="line">
+                        <span class="gradient-text">
+                            ПОЛУЧИ ПОЛНЫЙ СПЕКТР ЭМОЦИЙ ОТ ПРОДУКТА,
+                        </span>
+                    </span>
+                    <span class="line">В СОЗДАНИИ КОТОРОГО ПРИНИМАЕТ УЧАСТИЕ НЕЙРОСЕТЬ</span>
+                </p>
+                <button class="hero__button button" aria-label="Открыть модальное окно для получения цен">
+                    <span>ПОЛУЧИТЬ ПРАЙС</span>
+                </button>
+            </div>
+            <div class="hero__scene hero__scene_1">
+                <div class="hero__box hero__box_1" id="hero-box">
+                    <img class="hero__img hero__img-1" data-depth="0.5" width="475" height="547"
+                        src="images/boxes/raspberries.png" loading="lazy" alt="Жидкость со вкусом малины">
+                    <div class="hero__shadow" data-depth="1">
+                        <div class="hero__shadow-light"></div>
+                    </div>
+                </div>
+                <div class="hero__fruit" id="hero-fruit">
+                    <img class="hero__img hero__img-2" data-depth="-0.6" width="290" height="311"
+                        src="images/fruits/raspberries.svg" loading="lazy" alt="Малина">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accept-modal accept-modal_show">
+        <div class="accept-modal__content">
+            <div class="accept-modal__title">ВЫ СТАРШЕ 18 ЛЕТ?</div>
+            <div class="accept-modal__buttons">
+                <a class="accept-modal__button accept-modal__button_dark" href="https://www.google.com/">НЕТ.</a>
+                <button class="accept-modal__button accept-modal__button_white" id="agree">ДА!</button>
+            </div>
+            <p class="accept-modal__text">
+                Продукция, представленная на сайте, предназначена только для лиц, достигших
+                18 лет. Нажимая «Да», вы подтверждаете свое совершеннолетие.
+            </p>
+        </div>
+    </div>
+
+    <script defer src="js/libs/parralax.min.js"></script>
+    <script defer src="js/libs/splittype.min.js"></script>
+    <script defer src="js/libs/gsap.min.js"></script>
+    <script defer src="js/index.js"></script>
+</body>
+
+</html>
