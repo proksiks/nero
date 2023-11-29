@@ -18,15 +18,25 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/meta/favicon-512x512.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/normalize.css">
+    </noscript>
+    <link rel="preload" href="css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/index.css">
+    </noscript>
 </head>
 
 <body>
 
     <header class="header">
         <div class="header__container container">
-            <img class="header__logo" src="images/logo.svg" alt="Логотип компании HERO">
+            <img class="header__logo" width="144" height="56" src="images/logo.svg" alt="Логотип компании HERO">
             <nav class="header__nav">
                 <ul class="header__list list-reset">
                     <li class="header__block"><a class="header__link" href="#">Главная</a></li>
@@ -65,13 +75,11 @@
                     </span>
                     <span class="line">В СОЗДАНИИ КОТОРОГО ПРИНИМАЕТ УЧАСТИЕ НЕЙРОСЕТЬ</span>
                 </p>
-                <button class="hero__button button" aria-label="Открыть модальное окно для получения цен">
-                    <span>ПОЛУЧИТЬ ПРАЙС</span>
-                </button>
+                <button class="hero__button button"><span>ПОЛУЧИТЬ ПРАЙС</span></button>
             </div>
             <div class="hero__scene hero__scene_1">
                 <div class="hero__box hero__box_1" id="hero-box">
-                    <img class="hero__img hero__img-1" data-depth="0.5" width="475" height="547"
+                    <img class="hero__img hero__img-1" data-depth="0.5" width="479" height="547"
                         src="images/boxes/raspberries.png" loading="lazy" alt="Жидкость со вкусом малины">
                     <div class="hero__shadow" data-depth="1">
                         <div class="hero__shadow-light"></div>
@@ -90,7 +98,8 @@
         <div class="accept-modal__content">
             <div class="accept-modal__title">ВЫ СТАРШЕ 18 ЛЕТ?</div>
             <div class="accept-modal__buttons">
-                <button class="accept-modal__button accept-modal__button_dark" href="https://www.google.com/" id="not-agree">НЕТ.</button>
+                <button class="accept-modal__button accept-modal__button_dark" href="https://www.google.com/"
+                    id="not-agree">НЕТ.</button>
                 <button class="accept-modal__button accept-modal__button_white" id="agree">ДА!</button>
             </div>
             <p class="accept-modal__text">
