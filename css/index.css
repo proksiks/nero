@@ -235,13 +235,16 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
 }
+@media (max-width: 480px) {
+  .hero {
+    overflow: hidden;
+  }
+}
 @media (min-width: 768px) {
   .hero__container {
     display: flex;
     align-items: center;
   }
-}
-.hero__content {
 }
 @media (max-width: 1260px) {
   .hero__content {
@@ -324,6 +327,12 @@ body {
   transition: opacity 0.3s ease;
 }
 
+@media (max-width: 480px) {
+  .hero__shadow-light {
+    opacity: 0.75;
+  }
+}
+
 .hero__fruit {
   position: absolute;
   top: 35%;
@@ -377,8 +386,6 @@ body {
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-position: top right;
-
-  display: none;
 }
 .accept-modal.accept-modal_show {
   pointer-events: all;
