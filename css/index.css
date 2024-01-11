@@ -38,6 +38,28 @@ body {
   font-family: var(--ff-jost);
   background-color: var(--main-background);
 }
+body img::selection {
+  background: transparent;
+}
+body img::-moz-selection {
+  background: transparent;
+}
+body img::-webkit-selection {
+  background: transparent;
+}
+
+.wrapper {
+  height: 2000px;
+}
+
+.disabled-scroll {
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .container {
   width: 100%;
@@ -139,11 +161,13 @@ body {
   width: 100%;
   background-color: var(--header-background-color);
   padding: 1rem 0;
-  /*backdrop-filter: blur(2rem);*/
   transition: backdrop-filter 0.3s ease;
 }
-.header_active {
+
+.header_blur {
+  backdrop-filter: blur(2rem);
 }
+
 .header__container {
   display: flex;
   align-items: center;
@@ -226,14 +250,71 @@ body {
   background-image: url(../images/icons/social-3.svg);
 }
 
+.header__burger {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  display: none;
+}
+
+.header__burger span {
+  display: block;
+  position: absolute;
+  height: 0.3rem;
+  width: 100%;
+  background: var(--white);
+  border-radius: 4rem;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.header__burger span:nth-child(1) {
+  top: 0px;
+}
+
+.header__burger span:nth-child(2),
+.header__burger span:nth-child(3) {
+  top: 0.8rem;
+}
+
+.header__burger span:nth-child(4) {
+  top: 1.7rem;
+}
+
+.header__burger.open span:nth-child(1) {
+  top: 0.8rem;
+  width: 0%;
+  left: 50%;
+}
+
+.header__burger.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.header__burger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.header__burger.open span:nth-child(4) {
+  top: 0.8rem;
+  width: 0%;
+  left: 50%;
+}
+
 .hero {
   padding-top: 10rem;
   display: flex;
   align-items: center;
   min-height: 100vh;
-  background-image: url(../images/background.jpg);
-  background-repeat: no-repeat;
-  background-position: top right;
 }
 @media (max-width: 480px) {
   .hero {
@@ -379,13 +460,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--main-background);
   z-index: 999;
   pointer-events: none;
-
-  background-image: url(../images/background.jpg);
-  background-repeat: no-repeat;
-  background-position: top right;
+  padding-right: 18px;
 }
 .accept-modal.accept-modal_show {
   pointer-events: all;
@@ -437,14 +514,15 @@ body {
 /*  MODAL */
 
 /* background */
-.background-canvas {
+.background {
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /*background-color: #fdb2b2;*/
-  z-index: 99999;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.1;
 }
 /* background */
